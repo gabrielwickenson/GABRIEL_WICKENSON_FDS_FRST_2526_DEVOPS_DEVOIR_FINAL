@@ -1,4 +1,4 @@
-# Gestionnaire de Dépenses — Node.js
+# Gestionnaire de Dépenses Gabriel Wickenson — Node.js
 ### Projet Capstone DevOps
 
 Application Node.js pour gérer et suivre les dépenses personnelles.
