@@ -2,9 +2,9 @@
 # Niveau débutant: Modules 3-4 (CI/CD Architecture, GitHub Actions)
 # Votre tâche: Compléter ce fichier workflow en remplaçant les ???
 
-# ============================================================================
+# =========================================================================
 # SECTION 1: DÉCLENCHEURS (TRIGGERS)
-# ============================================================================
+# =========================================================================
 # Quand ce workflow s'exécute-t-il?
 name: Expense Tracker CI/CD # Tâche: Donnez un nom au pipeline (ex: "Expense Tracker CI/CD")
 
