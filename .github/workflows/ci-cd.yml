@@ -11,7 +11,7 @@ name: Expense Tracker CI/CD # Tâche: Donnez un nom au pipeline (ex: "Expense Tr
 on:
   # Déclencheur 1: Quand du code est poussé (push)
   push:
-    branches: [main, 'features/**']  # Tâche: Quelles branches déclencher? Conseil: Incluez main et branches de features
+    branches: [main, 'feature/**']  # Tâche: Quelles branches déclencher? Conseil: Incluez main et branches de features
   
   # Déclencheur 2: Quand une pull request est créée
   pull_request:
