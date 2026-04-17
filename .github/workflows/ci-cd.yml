@@ -11,7 +11,7 @@ name: Expense Tracker CI/CD # Tâche: Donnez un nom au pipeline (ex: "Expense Tr
 on:
   # Déclencheur 1: Quand du code est poussé (push)
   push:
-    branches: [main, features/**']  # Tâche: Quelles branches déclencher? Conseil: Incluez main et branches de features
+    branches: [main, 'features/**']  # Tâche: Quelles branches déclencher? Conseil: Incluez main et branches de features
   
   # Déclencheur 2: Quand une pull request est créée
   pull_request:
@@ -289,7 +289,7 @@ jobs:
       # L'app communique maintenant avec PostgreSQL (plus réaliste)
       # Module 7: Tester l'orchestration
       - name: Verify web application is responding
-        run: curl -f http://localhost:3000/healf || exit 1
+        run: curl -f http://localhost:3000/health || exit 1
           # Tâche : Quelle commande? 
           # Tâche: Quel endpoint? Conseil: Même que dockerfile-verify
       
@@ -301,7 +301,7 @@ jobs:
       # Si la connexion échoue, l'app ne répondrait pas correctement
       # Module 7: Communication inter-services Docker
       - name: Check database connection
-        run: curl -f http://localhost:3000/healf | grep -q "connected" || echo "Database initialized successfully"
+        run: curl -f http://localhost:3000/health | grep -q "connected" || echo "Database initialized successfully"
        # Tâche: Quelle commande? Conseil: Même que l'étape précédente mais vérifiez la réponse pour confirmer la connexion à la DB
       
       # ====================================================================
@@ -311,7 +311,7 @@ jobs:
       # Nettoyage: éviter de laisser des processus/ports actifs
       # Module 7: Gestion du cycle de vie docker-compose
       - name: Stop all services
-        run: docker compose # Tâche: Quelle commande pour arrêter tous les services? 
+        run: docker compose down  # Tâche: Quelle commande pour arrêter tous les services? 
 
 
 
