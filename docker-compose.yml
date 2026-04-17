@@ -39,8 +39,8 @@ services:
     # En CI/CD: Le fichier n'existe pas (dans .gitignore)
     #          Les variables viennent du runner (GitHub Secrets via env:)
     # Si votre github actions workflow echoue en ligne vous pouvez commenter ce bloc de codes si necessaire.
-    env_file:
-      - .env.docker
+    #env_file:
+     # - .env.docker
 
     # Mappage des ports
     # Format: "port_externe:port_interne"
